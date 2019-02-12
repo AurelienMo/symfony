@@ -3,7 +3,7 @@
 /*
  * This file is part of the Symfony package.
  *
- * (c) Aurelien Morvan <morvan.aurelien@gmail.com>
+ * (c) Fabien Potencier <fabien@symfony.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,9 +12,13 @@
 namespace Symfony\Component\HttpFoundation;
 
 /**
- * Class CsvStreamResponse
+ * CsvStreamResponse represents a csv file streamed HTTP response based on basic StreamedResponse.
+ *
+ * Callback is define to transform array datas and write transform result into csv file.
+ *
+ * @author Aurelien Morvan <morvan.aurelien@gmail.com>
  */
-class CsvStreamResponse extends StreamedResponse
+final class CsvStreamResponse extends StreamedResponse
 {
     /**
      * Override StreamedResponse to return CSV file to attachment.
